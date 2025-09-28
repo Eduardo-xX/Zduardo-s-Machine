@@ -37,6 +37,7 @@ export function converterOctal() {
 
 export function converterHexadecimal() {
             let hexadecimal = document.getElementById('input_input').value;
+            hexadecimal = hexadecimal.replaceAll(' ', '')
             let result_1 = document.getElementById('spanResult_1')
             let result_2 = document.getElementById('spanResult_2')
             let result_3 = document.getElementById('spanResult_3')

@@ -2,13 +2,28 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    
+    
 }
 
 /* HEADER COMEÇO */
 
+header {
+    /* background-color: #001824; */
+    background-color: #000;
+}
+
 header h1 {
+    margin: 0;
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     font-size: 3rem;
+}
+
+header hr {
+    height: 1px;
 }
 
 /* HEADER FIM */
@@ -19,13 +34,15 @@ main {
     display: flex;
     justify-content: space-between;
     height: 80vh;
+    background-image: url(./assets/backFundo2.jpg);
+    background-size: contain;
 }
 
 main #column_1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(1, 255, 115);
+    /* background-color: rgb(1, 255, 115); */
     flex: 1;
 }
 
@@ -38,10 +55,13 @@ main #column_1 .option {
     font-weight: bold;
     transition: .5s;
     font-size: 1.5rem;
+    box-shadow: 5px 3px 8px 1px #00e1ff;
 }
 
 main #column_1 .option:hover {
     transform: scale(1.1);
+    background-color: #363636;
+    border: #000 solid 1px;
 }
 
 main #column_1 .option:active {
@@ -49,7 +69,7 @@ main #column_1 .option:active {
 }
 
 main #column_2 {
-    background-color: rgb(0, 136, 255);
+    /* background-color: rgb(0, 136, 255); */
     flex: 1;
     display: flex;
     justify-content: center;
@@ -98,10 +118,13 @@ main #column_2 #mainResult #buttonResult {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
+    font-size: 2rem;
 }
 
 main #column_2 #mainResult #buttonResult:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    background-color: rgb(255, 123, 0);
 }
 
 main #column_2 #mainResult #buttonResult:active {
@@ -113,16 +136,20 @@ main #column_2 #mainResult .divResults {
 }
 
 main #column_2 #mainResult .divResults .buttonsResult {
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(255, 123, 0);
     border: transparent;
     padding: .3rem .6rem;
     border-radius: 1rem;
     box-shadow: 1px 1px 10px black;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 main #column_2 #mainResult .divResults .buttonsResult:hover {
     transform: scale(1.1);
+    background-color: rgb(60, 0, 117);
+    border: #000 solid 1px;
+    padding: .2rem .3rem;
 }
 
 main #column_2 #mainResult .divResults .buttonsResult:active {
@@ -141,7 +168,7 @@ main #column_2 #mainResult .spansResults {
 }
 
 main #column_3 {
-    background-color: rgb(174, 0, 255);
+    /* background-color: rgb(174, 0, 255); */
     flex: 1;
     display: flex;
     align-items: center;
@@ -151,7 +178,7 @@ main #column_3 {
 main #column_3 #placeInformation {
     width: 80%;
     height: 80%;
-    background-color: rgba(43, 226, 150, 0.39);
+    background-color: rgba(117, 182, 219, 0.349);
     border-radius: 5rem;
     overflow-y: auto;
     box-shadow: 1px 3px 8px 1px black;
@@ -205,6 +232,7 @@ main #column_3 #placeInformation #placeInformationText button {
 
 main #column_3 #placeInformation #placeInformationText button:hover {
     transform: scale(1.05);
+    background-color: rgb(212, 141, 74);
 }
 
 main #column_3 #placeInformation #placeInformationText button:active {

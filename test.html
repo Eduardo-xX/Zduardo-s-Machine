@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input_test" oninput="testando()">
+</body>
+</html>
+
+<script>
+    function testando() {
+        var test = document.getElementById('input_test').value
+        var tamanho = (test.length - 1)
+        var ultima = test[tamanho]
+        if (ultima != 1 && ultima != 0) {
+            input_test.value = input_test.value.slice(0, -1)
+        }
+    }
+</script>

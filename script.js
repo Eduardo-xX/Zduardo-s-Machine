@@ -1,4 +1,4 @@
-import { chooseDecimal, chooseBinario, chooseOctal, chooseHexadecimal} from "./JS/metodoAutomatico/escolhaDeConversoes.js";
+import { chooseDecimal, chooseBinario, chooseOctal, chooseHexadecimal, validacaoBinario, validacaoOctal, validacaoHexadecimal} from "./JS/metodoAutomatico/escolhaDeConversoes.js";
 import { converterDecimal, converterBinario, converterOctal, converterHexadecimal } from "./JS/metodoAutomatico/conversoes.js";
 import { addInfoConversaoBinarioDecimal, addInfoConversaoBinarioHexadecimal, addInfoConversaoBinarioOctal, addInfoConversaoDecimalBinario, addInfoConversaoDecimalHexadecimal, addInfoConversaoDecimalOctal, addInfoConversaoHexadecimalBinario, addInfoConversaoHexadecimalDecimal, addInfoConversaoHexadecimalOctal, addInfoConversaoOctalBinario, addInfoConversaoOctalDecimal, addInfoConversaoOctalHexadecimal } from "./JS/metodoAutomatico/infoConversao.js";
 
@@ -14,25 +14,27 @@ export function activeButtonsBinario() {
     document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoBinarioOctal)
     document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoBinarioDecimal)
     document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoBinarioHexadecimal)
+    document.getElementById('input_input').addEventListener('input', validacaoBinario)
 }
 export function activeButtonsOctal() {
     document.getElementById('buttonResult').addEventListener('click', converterOctal)
     document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoOctalBinario)
     document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoOctalDecimal)
     document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoOctalHexadecimal)
+    document.getElementById('input_input').addEventListener('input', validacaoOctal)
 }
 export function activeButtonsHexadecimal() {
     document.getElementById('buttonResult').addEventListener('click', converterHexadecimal)
     document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoHexadecimalBinario)
     document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoHexadecimalOctal)
     document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoHexadecimalDecimal)
+    document.getElementById('input_input').addEventListener('input', validacaoHexadecimal)
 }
 
 document.getElementById('buttonDecimal').addEventListener('click', chooseDecimal)
 document.getElementById('buttonBinario').addEventListener('click', chooseBinario)
 document.getElementById('buttonOctal').addEventListener('click', chooseOctal)
 document.getElementById('buttonHexadecimal').addEventListener('click', chooseHexadecimal)
-
 
 
 
