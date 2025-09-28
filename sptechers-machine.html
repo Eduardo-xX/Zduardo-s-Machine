@@ -18,7 +18,7 @@
         <hr>
     </header>
 
-    <main>
+    <main id="main">
 
         <div id="column_1">
             <button id="buttonDecimal" class="option">Decimal</button>
@@ -27,11 +27,78 @@
             <button id="buttonHexadecimal" class="option">Hexadecimal</button>
         </div>
 
-        <div id="column_2">
-        </div>
+        <div id="column_2"></div>
 
         <div id="column_3">
             
+        </div>
+
+        <div id="horizontal">
+            <!-- <div class="overlay" id="overlay">
+                <div class="modal">
+                    <span class="close" id="fechar">&times;</span>
+                    <h3>Conversão de Decimal para Hexadecimal.</h3>
+                    <span>
+                        1 - Converta de Decimal para binário.
+                        <br>
+                        Caso não saiba e queira aprender como fazer isso, 
+                        <span id="saberDecimalBinario">Clique Aqui!</span>
+                        <br>
+                        <div id="spaceDecimalBinario"></div>
+                        <br>
+                        <h5>Conversão de Binário para Octal</h5>
+                        2 - Agrupar bits em grupos de 4
+                        <br><br>
+                        Cada dígito hexadecimal corresponde a 4 bits binários.
+                        <br><br>
+                        Exemplo
+                        <br><br>
+                        * 0000 = 0 <br>
+                        * 0001 = 1 <br>
+                        * 0010 = 2 <br>
+                        * 0011 = 3 <br>
+                        * 0100 = 4 <br>
+                        * 0101 = 5 <br>
+                        * 0110 = 6 <br>
+                        * 0111 = 7 <br>
+                        * 1000 = 8 <br>
+                        * 1001 = 9 <br>
+                        * 1010 = A (10) <br>
+                        * 1011 = B (11) <br>
+                        * 1100 = C (12) <br>
+                        * 1101 = D (13) <br>
+                        * 1110 = E (14) <br>
+                        * 1111 = F (15) <br>
+                        <br>
+                        3 - Converter cada grupo para hexadecimal
+                        <br><br>
+                        Depois de formar grupos de 4 bits (da direita para a esquerda), basta substituir cada grupo pelo seu equivalente em hexadecimal.
+                        <br><br>
+                        Exemplo: converter 419 (decimal) para hexadecimal
+                        <br><br>
+                        Passo 1 – Decimal → Binário
+                        <br><br>
+                        419 em decimal = 110100011 (binário).
+                        <br><br>
+                        Passo 2 – Agrupar em grupos de 4 bits (da direita para a esquerda)<br><br> 
+                        110100011 → 0001 1010 0011 (adicionei zeros à esquerda para completar).
+                        <br><br>
+                        Passo 3 – Converter cada grupo em hexadecimal
+                        <br><br>
+                        * 0001 = 1 <br>
+                        * 1010 = A (10) <br>
+                        * 0011 = 3 <br>
+                        <br>
+                        Resultado = 1A3 (hexadecimal)
+                        <br><br>
+                        Resuminando:
+                        <br><br>
+                        1° Converta o número decimal para binário. <br>
+                        2° Agrupe em blocos de 4 bits. <br>
+                        3° Substitua cada bloco pelo equivalente hexadecimal.
+                    </span>
+                </div>
+            </div> -->
         </div>
 
     </main>
@@ -43,3 +110,9 @@
     <script src="script.js" type="module"></script>
 </body>
 </html>
+
+<!-- <h3>Conversão de Decimal para Binário.</h3>
+<h5>O sistema binário é posicional, assim como o decimal:</h5>
+<span>Para converter um número decimal em binário, você quebra o número em somas de potências de 2 e marca 1 onde a potência aparece, 0 onde não aparece.</span>
+<img src="./assets/decimalParaBinario-Excel.png" alt="">
+<button id="buttonInformation">Explicação da Conversão</button> -->

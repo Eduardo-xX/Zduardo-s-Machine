@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Modal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fundo escuro quando o modal aparece */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none; /* escondido no início */
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* A caixinha do modal */
+    .modal {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: 400px;
+      max-width: 90%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: aparecer 0.3s ease;
+    }
+
+    /* Botão de fechar (X) */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    @keyframes aparecer {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="abrir">Abrir Tutorial</button>
+
+  <!-- Overlay com o modal -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <span class="close" id="fechar">&times;</span>
+      <h2>Tutorial</h2>
+      <p>
+        Aqui você pode colocar o texto do seu tutorial.  
+        Por exemplo: clique no botão verde para ganhar pontos!
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const abrir = document.getElementById("abrir")
+    const fechar = document.getElementById("fechar")
+    const overlay = document.getElementById("overlay")
+
+    // Abre o modal
+    abrir.addEventListener("click", () => {
+      overlay.style.display = "flex"
+    })
+
+    // Fecha no X
+    fechar.addEventListener("click", () => {
+      overlay.style.display = "none"
+    })
+
+    // Fecha clicando fora da caixa
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none"
+      }
+    })
+  </script>
+
+</body>
+</html>

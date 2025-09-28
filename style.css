@@ -4,10 +4,16 @@ body {
     padding: 0;
 }
 
+/* HEADER COMEÇO */
+
 header h1 {
     text-align: center;
     font-size: 3rem;
 }
+
+/* HEADER FIM */
+
+/* MAIN COMEÇO */
 
 main {
     display: flex;
@@ -31,6 +37,7 @@ main #column_1 .option {
     border: none;
     font-weight: bold;
     transition: .5s;
+    font-size: 1.5rem;
 }
 
 main #column_1 .option:hover {
@@ -105,6 +112,23 @@ main #column_2 #mainResult .divResults {
     margin-left: 2rem;
 }
 
+main #column_2 #mainResult .divResults .buttonsResult {
+    background-color: rgb(100, 100, 100);
+    border: transparent;
+    padding: .3rem .6rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px black;
+    transition: 0.2s;
+}
+
+main #column_2 #mainResult .divResults .buttonsResult:hover {
+    transform: scale(1.1);
+}
+
+main #column_2 #mainResult .divResults .buttonsResult:active {
+    transform: scale(1.4);
+}
+
 main #column_2 #mainResult .tituloResult {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -119,8 +143,125 @@ main #column_2 #mainResult .spansResults {
 main #column_3 {
     background-color: rgb(174, 0, 255);
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+main #column_3 #placeInformation {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(43, 226, 150, 0.39);
+    border-radius: 5rem;
+    overflow-y: auto;
+    box-shadow: 1px 3px 8px 1px black;
+}
+
+main #column_3 #placeInformation::-webkit-scrollbar {
+    display: none;   
+}
+
+main #column_3 #placeInformation hr {
+    width: 100%;
+    border-color: #000;
+}
+
+main #column_3 #placeInformation #placeInformationText {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem;
+    text-align: justify;
+}   
+
+main #column_3 #placeInformation #placeInformationText h3 {
+    align-self: center;
+}
+
+main #column_3 #placeInformation #placeInformationText h4 {
+    font-size: 1.05rem;
+}
+
+main #column_3 #placeInformation #placeInformationText span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .9rem;
+}
+
+main #column_3 img {
+    width: 100%;
+}
+
+main #column_3 #placeInformation #placeInformationText button {
+    width: 40%;
+    align-self: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: transparent;
+    margin: 1rem;
+    background-color: rgb(199, 212, 74);
+    font-weight: bold;
+    transition: .5s;
+    color: rgb(22, 47, 117);
+}
+
+main #column_3 #placeInformation #placeInformationText button:hover {
+    transform: scale(1.05);
+}
+
+main #column_3 #placeInformation #placeInformationText button:active {
+    transform: scale(1.2);
+}
+
+
+/* More INFOS */
+
+#horizontal .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#horizontal .modal {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.2rem;
+    border-radius: .8rem;
+    width: 1000px;
+    max-width: 90%;
+    max-height: 75%;
+    box-shadow: 0 .2rem 1.2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: aparecer 0.3s ease;
+    overflow-y: auto;
+}
+
+#horizontal .modal::-webkit-scrollbar {
+display: none;
+}
+
+#horizontal .modal #saberDecimalBinario {
+    color: #0084ff;
+    text-decoration: underline;
+}
+
+#horizontal .close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.95rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0;}
+    to { transform: scale(1); opacity: 1;}
+}
+
+/* MAIN FIM */
 
 footer {
     width: 100vw;

@@ -1,16 +1,31 @@
 import { chooseDecimal, chooseBinario, chooseOctal, chooseHexadecimal} from "./JS/metodoAutomatico/escolhaDeConversoes.js";
+import { converterDecimal, converterBinario, converterOctal, converterHexadecimal } from "./JS/metodoAutomatico/conversoes.js";
+import { addInfoConversaoBinarioDecimal, addInfoConversaoBinarioHexadecimal, addInfoConversaoBinarioOctal, addInfoConversaoDecimalBinario, addInfoConversaoDecimalHexadecimal, addInfoConversaoDecimalOctal, addInfoConversaoHexadecimalBinario, addInfoConversaoHexadecimalDecimal, addInfoConversaoHexadecimalOctal, addInfoConversaoOctalBinario, addInfoConversaoOctalDecimal, addInfoConversaoOctalHexadecimal } from "./JS/metodoAutomatico/infoConversao.js";
 
 export function activeButtonsDecimal() {
     document.getElementById('buttonResult').addEventListener('click', converterDecimal)
+    document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoDecimalBinario)
+    document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoDecimalOctal)
+    document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoDecimalHexadecimal)
+    
 }
 export function activeButtonsBinario() {
     document.getElementById('buttonResult').addEventListener('click', converterBinario)
+    document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoBinarioOctal)
+    document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoBinarioDecimal)
+    document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoBinarioHexadecimal)
 }
 export function activeButtonsOctal() {
     document.getElementById('buttonResult').addEventListener('click', converterOctal)
+    document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoOctalBinario)
+    document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoOctalDecimal)
+    document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoOctalHexadecimal)
 }
 export function activeButtonsHexadecimal() {
     document.getElementById('buttonResult').addEventListener('click', converterHexadecimal)
+    document.getElementById('buttonResult_1').addEventListener('click', addInfoConversaoHexadecimalBinario)
+    document.getElementById('buttonResult_2').addEventListener('click', addInfoConversaoHexadecimalOctal)
+    document.getElementById('buttonResult_3').addEventListener('click', addInfoConversaoHexadecimalDecimal)
 }
 
 document.getElementById('buttonDecimal').addEventListener('click', chooseDecimal)
@@ -18,52 +33,7 @@ document.getElementById('buttonBinario').addEventListener('click', chooseBinario
 document.getElementById('buttonOctal').addEventListener('click', chooseOctal)
 document.getElementById('buttonHexadecimal').addEventListener('click', chooseHexadecimal)
 
-export function converterDecimal() {
-            let decimal = Number(document.getElementById('input_input').value);
-            let result_1 = document.getElementById('spanResult_1')
-            let result_2 = document.getElementById('spanResult_2')
-            let result_3 = document.getElementById('spanResult_3')
 
-            result_1.innerHTML = decimal.toString(2);
-            result_2.innerHTML = decimal.toString(8);
-            result_3.innerHTML = decimal.toString(16);
-}
 
-function converterBinario() {
-            let binario = Number(document.getElementById('input_input').value);
-            let result_1 = document.getElementById('spanResult_1')
-            let result_2 = document.getElementById('spanResult_2')
-            let result_3 = document.getElementById('spanResult_3')
 
-            let decimal = parseInt(binario, 2)
 
-            result_1.innerHTML = decimal.toString(8);
-            result_2.innerHTML = decimal
-            result_3.innerHTML = decimal.toString(16);
-}
-
-function converterOctal() {
-            let octal = Number(document.getElementById('input_input').value);
-            let result_1 = document.getElementById('spanResult_1')
-            let result_2 = document.getElementById('spanResult_2')
-            let result_3 = document.getElementById('spanResult_3')
-
-            let decimal = parseInt(octal, 8)
-
-            result_1.innerHTML = decimal.toString(2);
-            result_2.innerHTML = decimal
-            result_3.innerHTML = decimal.toString(16);
-}
-
-function converterHexadecimal() {
-            let hexadecimal = document.getElementById('input_input').value;
-            let result_1 = document.getElementById('spanResult_1')
-            let result_2 = document.getElementById('spanResult_2')
-            let result_3 = document.getElementById('spanResult_3')
-
-            let decimal = parseInt(hexadecimal, 16)
-
-            result_1.innerHTML = decimal.toString(2);
-            result_2.innerHTML = decimal.toString(8);
-            result_3.innerHTML = decimal;
-}
