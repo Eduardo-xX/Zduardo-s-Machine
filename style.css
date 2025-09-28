@@ -242,7 +242,7 @@ main #column_3 #placeInformation #placeInformationText button:active {
 display: none;
 }
 
-#horizontal .modal #saberDecimalBinario {
+#horizontal .modal #saberDecimalBinario, #saberOctalBinario, #saberHexadecimalBinario {
     color: #0084ff;
     text-decoration: underline;
 }
